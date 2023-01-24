@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Open Account</title>
+  <style>
+         body{
+            border: 1pt double ;
+                background-color: rgb(0, 123, 255);
+                text-align: center;
+                border-bottom-left-radius: 15pt;
+                border-top-right-radius: 15pt;
+                font-family: Papyrus;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px ;
+        }
+    </style>
+</head>
+<body>
+
+
+<form action="#" th:action="@{/depositfunds}" th:object="${customerDeposit}" method = "POST">
+  <div class="form-group">
+    <label for="accNumber">Account Number</label>
+    <input type = "text" th:field="*{accNumber}" id = "accNumber" placeholder = "Enter Account Number">
+    <br>
+    <br>
+    <label for="DepositorName">Depositor's Name</label>
+    <input type = "text" th:field="*{DepositorName}" id = "DepositorName" placeholder = "Enter your name">
+    <br>
+    <br>
+    <label for="accName">Account Name</label>
+    <input type = "text" th:field="*{accName}" id = "accName" placeholder = "Enter Account Name">
+    <br>
+    <br>
+    <label for="amount">Amount</label>
+    <input type = "number" th:field="*{amount}" id = "amount" placeholder = "Enter amount to be deposited">
+    <br>
+    <br>
+
+  </div>
+  <br>
+
+  <input type="submit" value="Submit form"/>
+  <br>
+  <br>
+  <button><a href="/">Home</a></button>
+</form>
+<br>
+<br>
+
+<marquee behavior="" direction="">Your Simpler, Smarter Bank || *826# || Save and win Palli Promo2</marquee>
+</body>
+</html>

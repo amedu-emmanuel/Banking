@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Balance</title>
+    <style>
+         body{
+            border: 1pt double ;
+                background-color: rgb(0, 123, 255);
+                text-align: center;
+                border-bottom-left-radius: 15pt;
+                border-top-right-radius: 15pt;
+                font-family: Papyrus;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px ;
+        }
+    </style>
+</head>
+<body>
+<h1>Please see account balance below</h1>
+<form action="#" th:action="@{/view}" th:object="${customer}"  method="POST">
+    <div class="form-group">
+        <label for="accNo">Description</label>
+        <input class="form-control" type="text" th:field="*{accNo}" name="accNo" id="accNo"
+               placeholder="Enter Account Number" autocomplete="off">
+    </div>
+    <br>
+
+    <button type="submit" class="btn btn-success">Check Balance</button>
+</form>
+<br>
+<button><a href="/">Home</a></button>
+
+
+</body>
+</html>

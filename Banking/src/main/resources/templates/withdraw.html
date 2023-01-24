@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Withdrawal</title>
+  <style>
+         body{
+            border: 1pt double ;
+                background-color: rgb(0, 123, 255);
+                text-align: center;
+                border-bottom-left-radius: 15pt;
+                border-top-right-radius: 15pt;
+                font-family: Papyrus;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px, rgba(0, 0, 0, 0.25) 0px 5px 55px ;
+        }
+    </style>
+</head>
+<body>
+
+
+<form action="#" th:action="@{/withdrawfunds}" th:object="${customer}" method = "POST">
+   <div class="form-group">
+    <label for="accNo">Account Number</label>
+    <input type = "text" th:field="*{accNo}" id = "accNo" placeholder = "Enter your account number">
+       <br>
+       <br>
+    <label for="accBalance">Amount to Withdraw</label>
+    <input type = "number" th:field="*{accBalance}" id = "accBalance" placeholder = "Enter amount to withdraw">
+    <br>
+  </div>
+  <br>
+    <br>
+
+  <input type="submit" value="Submit form"/>
+    <br>
+    <br>
+    <button><a href="/">Home</a></button>
+</form>
+<br>
+<br>
+<marquee behavior="" direction="">Your Simpler, Smarter Bank || *826# || Save and win Palli Promo2</marquee>
+</body>
+</html>
